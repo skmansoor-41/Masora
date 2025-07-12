@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Careers at Masora - Join our mission to empower fresher job seekers. Drop your resume today." />
+  <link rel="canonical" href="https://masora.store/p/careers.html" />
+  <title>Careers | Masora</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #000;
+      border-bottom: 1px solid #FFD700;
+      z-index: 999;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+      border-radius: 8px;
+    }
+
+    .logo span {
+      font-size: 28px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        background: #111;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .section {
+      padding: 40px 20px;
+      background: #1a1a1a;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
+    }
+
+    .section h1 {
+      color: #FFD700;
+      text-align: center;
+    }
+
+    .section p {
+      color: #ccc;
+      font-size: 18px;
+      margin: 10px 0 25px;
+      text-align: center;
+    }
+
+    .highlight {
+      background: #111;
+      border: 2px solid #FFD700;
+      border-radius: 12px;
+      padding: 30px 20px;
+      max-width: 500px;
+      margin: 40px auto;
+    }
+
+    .highlight h2 {
+      color: #FFD700;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .highlight input,
+    .highlight textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: #fff;
+    }
+
+    .highlight button {
+      background-color: #FFD700;
+      color: #000;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .no-openings {
+      text-align: center;
+      color: #FFD700;
+      font-size: 20px;
+      margin-top: 30px;
+    }
+
+    footer {
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      padding: 30px 10px;
+    }
+
+    footer a {
+      color: #FFD700;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="/img/logo.jpg" alt="Masora Logo" />
+      <span>Masora</span>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/p/about-us.html">About</a>
+      <a href="/p/job-hunt.html">Job Hunt</a>
+      <a href="/p/careers.html">Careers</a>
+      <a href="/p/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Career Section -->
+  <section class="section" data-aos="fade-up">
+    <h1>🚀 Careers at Masora</h1>
+    <p>We're on a mission to empower the next generation of IT professionals. Join our dynamic, remote-first team and contribute to shaping fresher careers through technology, training & opportunity access.</p>
+
+    <p>We believe in passion over experience, execution over ideas, and creating real value for job seekers every single day.</p>
+  </section>
+
+  <!-- No Openings -->
+  <section class="section" data-aos="fade-up">
+    <h2 class="no-openings">📢 No Current Openings at Present</h2>
+    <p style="text-align:center; color:#ccc;">But we're always open to future talent! Drop your resume below.</p>
+  </section>
+
+  <!-- Drop Resume -->
+  <section class="highlight" data-aos="fade-up">
+    <h2>📩 Drop Your Resume</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Tell us about your interest / role preference" required></textarea>
+      <input type="url" name="resume" placeholder="Resume Drive Link (Google Drive / Dropbox)" required />
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <a href="/p/privacy-policy.html">Privacy Policy</a> |
+      <a href="/p/terms-and-conditions.html">Terms</a>
+    </div>
+    <p>&copy; 2025 Masora. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
