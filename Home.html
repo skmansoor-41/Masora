@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masora | IT Jobs for Freshers</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .dark-mode .header,
+    .dark-mode .section,
+    .dark-mode .highlight,
+    .dark-mode footer {
+      background: #f9f9f9;
+      color: #111;
+    }
+
+    .dark-mode nav a,
+    .dark-mode .social-icons a {
+      color: #111;
+    }
+
+    .preloader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
+
+    .preloader span {
+      font-size: 28px;
+      color: #FFD700;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #000;
+      border-bottom: 1px solid #FFD700;
+      z-index: 999;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 80px;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      font-size: 32px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        background: #111;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: #111;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      color: #FFD700;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .section {
+      padding: 40px 20px;
+      background: #1a1a1a;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section h2 {
+      color: #FFD700;
+      margin-bottom: 15px;
+    }
+
+    .section ul {
+      list-style: square;
+      padding-left: 20px;
+      color: #ddd;
+    }
+
+    .highlight {
+      background: #222;
+      color: #eee;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+      border-left: 5px solid #FFD700;
+      border-radius: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #FFD700;
+      font-size: 20px;
+    }
+
+    footer {
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      padding: 30px 10px;
+    }
+
+    footer a {
+      color: #FFD700;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="preloader" id="preloader">
+  <span>Loading Masora...</span>
+</div>
+
+<header class="header">
+  <div class="logo">
+    <img src="img/logo.jpg" alt="Masora Logo">
+    <span>Masora</span>
+  </div>
+  <nav id="mainNav">
+    <a href="/">Home</a>
+    <a href="/p/about-us.html">About</a>
+    <a href="/p/job-hunt.html">Job Hunt</a>
+    <a href="/p/careers.html">Careers</a>
+    <a href="/p/contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" data-aos="fade-down">
+  <h1>🚀 Masora – Your IT Job Launchpad</h1>
+  <p>Freshers' most trusted platform for Off-Campus Drives, WFH Jobs & Interview Prep.</p>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>💼 What We Cover</h2>
+  <ul>
+    <li>Daily IT Job Alerts for Freshers (B.Tech, BCA, MCA, etc.)</li>
+    <li>Off-Campus Drives & Walk-In Interviews</li>
+    <li>Remote Internships & WFH Roles</li>
+    <li>MNC Hiring: Infosys, TCS, Wipro & more</li>
+  </ul>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>🧠 Placement Preparation</h2>
+  <ul>
+    <li>Mock Tests, Coding & Reasoning Practice</li>
+    <li>Resume Building Tips</li>
+    <li>Real HR Interview Experiences</li>
+  </ul>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>📂 Popular Job Categories</h2>
+  <ul>
+    <li>Software Developer (Java, Python, .NET)</li>
+    <li>QA/Testing Roles</li>
+    <li>Data Analyst / BI Analyst</li>
+    <li>Cloud / DevOps / Support</li>
+  </ul>
+</section>
+
+<section class="highlight" data-aos="fade-up">
+  <span>🎯 Whether you're upskilling or job-hunting — Masora is your daily career partner!</span>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://t.me/" target="_blank"><i class="fab fa-telegram"></i></a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="/p/privacy-policy.html">Privacy Policy</a> |
+    <a href="/p/terms-and-conditions.html">Terms</a>
+  <p>&copy; 2025 Masora. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  window.addEventListener('load', () => {
+    document.getElementById('preloader').style.display = 'none';
+  });
+</script>
+</body>
+</html>
