@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Latest Infosys System Engineer Fresher Job Opportunity - Apply via Masora." />
+  <link rel="canonical" href="https://masora.store/p/job-hub.html" />
+  <title>Infosys System Engineer Job | Masora</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #000;
+      border-bottom: 1px solid #FFD700;
+      z-index: 999;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+      border-radius: 8px;
+    }
+
+    .logo span {
+      font-size: 28px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        background: #111;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .section {
+      padding: 40px 20px;
+      background: #1a1a1a;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section h1, .section h2 {
+      color: #FFD700;
+    }
+
+    .section p, .section ul {
+      color: #ccc;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style: square;
+    }
+
+    .apply-button {
+      display: inline-block;
+      background: #FFD700;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .apply-button:hover {
+      background: #e6c200;
+    }
+
+    footer {
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      padding: 30px 10px;
+    }
+
+    footer a {
+      color: #FFD700;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="/logo.jpg" alt="Masora Logo">
+      <span>Masora</span>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about-us.html">About</a>
+      <a href="/job-hub.html">Job Hunt</a>
+      <a href="/Careers.html">Careers</a>
+      <a href="/Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Job Post Section -->
+  <section class="section" data-aos="fade-up">
+    <h1>💼 Infosys Hiring – System Engineer</h1>
+    <p><strong>Role:</strong> System Engineer (Entry Level)</p>
+    <p><strong>Location:</strong> PAN India (Multiple Office Locations)</p>
+    <p><strong>Work Mode:</strong> Work from Office / Hybrid</p>
+    <p><strong>Salary:</strong> ₹3.5 – ₹6 LPA</p>
+    <p><strong>Experience:</strong> 0–2 Years</p>
+
+    <h2>🔧 Key Responsibilities:</h2>
+    <ul>
+      <li>Support software deployments and ensure systems are up-to-date.</li>
+      <li>Monitor infrastructure, troubleshoot issues, and collaborate with cross-functional teams.</li>
+      <li>Work on basic scripting and automation tasks when required.</li>
+    </ul>
+
+    <h2>📌 Eligibility Criteria:</h2>
+    <ul>
+      <li>Education: BE/BTech/MCA/MSc – Any Specialization (2022–2024 batches)</li>
+      <li>Basic understanding of OS, networking, or scripting is preferred.</li>
+      <li>Strong communication and problem-solving skills.</li>
+    </ul>
+
+    <h2>🌟 Perks & Benefits:</h2>
+    <ul>
+      <li>Health Insurance & Wellness Benefits</li>
+      <li>Upskilling via Infosys Learning Platform</li>
+      <li>Employee-centric policies</li>
+    </ul>
+
+    <a href="https://career.infosys.com" class="apply-button" target="_blank">Apply Now on Infosys Careers</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <a href="/privacy-policy.html">Privacy Policy</a> |
+      <a href="/terms-and-conditions.html">Terms</a>
+    </div>
+    <p>&copy; 2025 Masora. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+</body>
+</html>
