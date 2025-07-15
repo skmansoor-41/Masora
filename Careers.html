@@ -147,6 +147,13 @@
       cursor: pointer;
     }
 
+    #resume-status {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #FFD700;
+    }
+
     .no-openings {
       text-align: center;
       color: #FFD700;
@@ -201,12 +208,13 @@
   <!-- Resume Form -->
   <section class="highlight" data-aos="fade-up">
     <h2>📩 Drop Your Resume</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
+    <form action="https://formspree.io/f/xzzvbbgq" method="POST" id="resume-form">
       <input type="text" name="name" placeholder="Your Full Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="4" placeholder="Tell us about your interest / role preference" required></textarea>
       <input type="url" name="resume" placeholder="Resume Drive Link (Google Drive / Dropbox)" required />
       <button type="submit">Submit</button>
+      <div id="resume-status"></div>
     </form>
   </section>
 
@@ -220,17 +228,43 @@
   </footer>
 
   <!-- Scripts -->
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
 
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
-
     menuToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
-  </script>
 
+    // Resume Form Submission
+    const resumeForm = document.getElementById('resume-form');
+    const resumeStatus = document.getElementById('resume-status');
+
+    resumeForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const data = new FormData(resumeForm);
+
+      try {
+        const response = await fetch(resumeForm.action, {
+          method: "POST",
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          resumeStatus.textContent = "✅ Resume submitted successfully!";
+          resumeForm.reset();
+        } else {
+          resumeStatus.textContent = "❌ Submission failed. Try again.";
+        }
+      } catch (error) {
+        resumeStatus.textContent = "⚠️ Network error. Please try again.";
+      }
+    });
+  </script>
 </body>
 </html>
