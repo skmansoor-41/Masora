@@ -173,7 +173,6 @@
       background: #e6c200;
     }
 
-    /* Popup Modal */
     .popup-overlay {
       position: fixed;
       top: 0; left: 0;
@@ -231,6 +230,13 @@
       font-size: 22px;
       color: #FFD700;
       cursor: pointer;
+    }
+
+    #hr-status {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #FFD700;
     }
 
     footer {
@@ -311,17 +317,18 @@
     <button class="cta-btn" onclick="openPopup()">Connect with HR Services</button>
   </div>
 
-  <!-- Recruiter Popup Modal -->
+  <!-- HR Services Popup Form -->
   <div id="popup" class="popup-overlay">
     <div class="popup-content">
       <span class="close-btn" onclick="closePopup()">&times;</span>
       <h2>Post Your Requirement</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+      <form action="https://formspree.io/f/xvgqooaz" method="POST" id="hr-form">
         <input type="text" name="company" placeholder="Company Name" required>
         <input type="text" name="hr_name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Official Email" required>
         <textarea name="requirements" rows="4" placeholder="Job Description / Role Details" required></textarea>
         <button type="submit">Submit</button>
+        <div id="hr-status"></div>
       </form>
     </div>
   </div>
@@ -345,6 +352,11 @@
       document.getElementById('preloader').style.display = 'none';
     });
 
+    // Mobile Menu
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("nav-menu").classList.toggle("active");
+    });
+
     // Popup Logic
     function openPopup() {
       document.getElementById("popup").style.display = "flex";
@@ -361,10 +373,35 @@
       }
     };
 
-    // Mobile Menu
-    document.getElementById("menu-toggle").addEventListener("click", function () {
-      document.getElementById("nav-menu").classList.toggle("active");
-    });
+    // HR Form Submission with Feedback
+    const hrForm = document.getElementById("hr-form");
+    const hrStatus = document.getElementById("hr-status");
+
+    if (hrForm) {
+      hrForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const data = new FormData(hrForm);
+
+        try {
+          const response = await fetch(hrForm.action, {
+            method: "POST",
+            body: data,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            hrStatus.textContent = "✅ Submitted successfully!";
+            hrForm.reset();
+          } else {
+            hrStatus.textContent = "❌ Failed to send. Try again.";
+          }
+        } catch (error) {
+          hrStatus.textContent = "⚠️ Network error. Please check connection.";
+        }
+      });
+    }
   </script>
 </body>
 </html>
