@@ -20,28 +20,6 @@
       overflow-x: hidden;
     }
 
-    .preloader {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 10000;
-    }
-
-    .preloader span {
-      font-size: 28px;
-      color: #FFD700;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
-    }
-
     .header {
       position: sticky;
       top: 0;
@@ -82,11 +60,81 @@
       font-weight: 500;
     }
 
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
+    .section {
+      padding: 40px 20px;
+      background: #1a1a1a;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
+    }
+
+    .section h1,
+    .section h2 {
       color: #FFD700;
-      cursor: pointer;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .section p {
+      color: #ccc;
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .team-member {
+      background: #111;
+      padding: 25px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .team-member h3 {
+      color: #FFD700;
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+
+    .team-member p {
+      color: #ccc;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      padding: 30px 10px;
+    }
+
+    footer a {
+      color: #FFD700;
+      margin: 0 10px;
     }
 
     @media (max-width: 768px) {
@@ -108,200 +156,62 @@
 
       .menu-toggle {
         display: block;
+        font-size: 28px;
+        color: #FFD700;
+        cursor: pointer;
       }
-    }
-
-    .section {
-      padding: 40px 20px;
-      background: #1a1a1a;
-      margin: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
-    }
-
-    .section h1,
-    .section h2 {
-      color: #FFD700;
-      margin-bottom: 15px;
-    }
-
-    .section p {
-      color: #ccc;
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    .team-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .team-member {
-      background: #111;
-      padding: 20px;
-      border-radius: 12px;
-      width: 260px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
-    }
-
-    .team-member img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-
-    .team-member h3 {
-      color: #FFD700;
-      margin: 10px 0 5px;
-    }
-
-    .team-member p {
-      color: #ccc;
-      margin-bottom: 8px;
-    }
-
-    .team-member a {
-      color: #FFD700;
-      text-decoration: none;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .social-icons a {
-      color: #FFD700;
-      font-size: 22px;
-      transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #e6c200;
-    }
-
-    footer {
-      text-align: center;
-      color: #999;
-      font-size: 14px;
-      padding: 30px 10px;
-    }
-
-    footer a {
-      color: #FFD700;
-      margin: 0 10px;
     }
   </style>
 </head>
 <body>
-  <div class="preloader" id="preloader">
-    <span>Loading Masora...</span>
-  </div>
 
   <header class="header">
     <div class="logo">
-      <img src="/logo.jpg" alt="Masora Logo" loading="lazy">
+      <img src="https://masora.store/Photos/logo.jpg" alt="Masora Logo">
       <span>Masora</span>
     </div>
-    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
-    <nav id="nav-menu">
+    <nav>
       <a href="/">Home</a>
-      <a href="/about-us.html">About</a>
-      <a href="/job-hub.html">Job Hunt</a>
-      <a href="/Careers.html">Careers</a>
-      <a href="/Contact.html">Contact</a>
+      <a href="/jobs">Jobs</a>
+      <a href="/contact">Contact</a>
+      <a href="/p/about-us.html">About</a>
     </nav>
   </header>
 
-  <section class="section" data-aos="fade-up">
-    <h1>👋 Welcome to Masora</h1>
-    <p>Masora is your dedicated platform for helping fresh graduates kickstart their careers in the IT industry. From Off-Campus Drives and Work From Home jobs to Interview Prep – we bring everything under one trusted platform.</p>
-  </section>
-
-  <section class="section" data-aos="fade-up">
-    <h2>🚀 Our Mission</h2>
-    <p>We aim to bridge the gap between skilled students and growing companies. Our goal is to provide real-time opportunities, updates, and career-building support to India’s fresh talent pool.</p>
-  </section>
-
-  <section class="section" data-aos="fade-up">
-    <h2>🌟 Why Choose Masora?</h2>
+  <section class="section">
+    <h1>About Masora</h1>
     <p>
-      - 100% focus on freshers and early-career seekers<br>
-      - Curated job alerts from trusted companies<br>
-      - Free resources and resume tips<br>
-      - Real-time interview experiences from selected candidates
+      Welcome to <strong>Masora</strong> – India’s trusted fresher job platform dedicated to connecting passionate youth to IT jobs, internships, and mentorship opportunities. Whether you’re a student looking to start your career or a startup aiming to hire the best emerging talent, Masora is your go-to destination.
+    </p>
+    <p>
+      We believe in equal opportunity, skill-first hiring, and building a platform that is as accessible as it is impactful.
     </p>
   </section>
 
-  <section class="section" data-aos="fade-up">
-    <h2>🌏 Our Vision</h2>
-    <p>To become India’s most reliable fresher-job platform, helping over 1 million graduates land their dream jobs by 2026.</p>
-  </section>
-
-  <section class="section" data-aos="fade-up">
-    <h2>👥 Meet Our Core Team</h2>
+  <section class="section">
+    <h2>Our Core Team</h2>
     <div class="team-grid">
       <div class="team-member">
         <img src="https://masora.store/Photos/Mansoor.jpg" alt="Mansoor Shaik">
         <h3>Mansoor Shaik</h3>
         <p>Founder & CEO</p>
-        <a href="https://www.linkedin.com/in/mansoorshaik" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
-      <div class="team-member">
-        <img src="https://masora.store/Photos/eswar.jpg" alt="Eswar">
-        <h3>Eswar</h3>
-        <p>Chief Human Resources Officer</p>
-        <a href="https://www.linkedin.com/in/eswar" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
       </div>
       <div class="team-member">
         <img src="https://masora.store/Photos/Aakash.jpg" alt="Aakash">
         <h3>Aakash</h3>
-        <p>Head of Marketing</p>
-        <a href="https://www.linkedin.com/in/aakash" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <p>Content Head</p>
       </div>
       <div class="team-member">
-        <img src="https://masora.store/Photos/Lavanya.jpg" alt="Sana">
-        <h3>Kalyani</h3>
-        <p>Finance & Compliance Head</p>
-        <a href="https://www.linkedin.com/in/sana" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <img src="https://masora.store/Photos/Eswar.jpg" alt="Eswar">
+        <h3>Eswar</h3>
+        <p>HR Head</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section" data-aos="fade-up">
-    <h2>💬 Let’s Stay Connected</h2>
-    <p>Follow Masora on social media for instant updates and fresher job alerts:</p>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/company/masora-masora" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.youtube.com/@Masora.marketing" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://whatsapp.com/channel/0029VbBOkoRDeON2e4oucL3E" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://t.me/masora_marketing" target="_blank"><i class="fab fa-telegram"></i></a>
     </div>
   </section>
 
   <footer>
-    <div>
-      <a href="/privacy-policy.html">Privacy Policy</a> |
-      <a href="/terms-and-conditions.html">Terms</a>
-    </div>
-    <p>&copy; 2025 Masora. All rights reserved.</p>
+    &copy; 2025 Masora. All Rights Reserved.
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    window.addEventListener('load', () => {
-      document.getElementById('preloader').style.display = 'none';
-    });
-    document.getElementById("menu-toggle").addEventListener("click", function () {
-      document.getElementById("nav-menu").classList.toggle("active");
-    });
-  </script>
 </body>
 </html>
