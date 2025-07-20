@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
-  <meta name="description" content="Masora helps freshers find IT jobs, off-campus drives, and placement prep resources." />
-  <link rel="canonical" href="https://masora.store/" />
-  <title>Masora | IT Jobs for Freshers</title>
+  <meta name="description" content="Discover Masora – India’s trusted fresher job platform connecting youth to IT jobs, internships, and career mentorship." />
+  <link rel="canonical" href="https://masora.store/p/about-us.html" />
+  <title>About Us | Masora</title>
 
-  <!-- Font Awesome + AOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
@@ -20,29 +18,6 @@
       background-color: #000;
       color: #fff;
       overflow-x: hidden;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .preloader {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 10000;
-    }
-
-    .preloader span {
-      font-size: 28px;
-      color: #FFD700;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
     }
 
     .header {
@@ -85,11 +60,81 @@
       font-weight: 500;
     }
 
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
+    .section {
+      padding: 40px 20px;
+      background: #1a1a1a;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
+    }
+
+    .section h1,
+    .section h2 {
       color: #FFD700;
-      cursor: pointer;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .section p {
+      color: #ccc;
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .team-member {
+      background: #111;
+      padding: 25px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .team-member h3 {
+      color: #FFD700;
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+
+    .team-member p {
+      color: #ccc;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      padding: 30px 10px;
+    }
+
+    footer a {
+      color: #FFD700;
+      margin: 0 10px;
     }
 
     @media (max-width: 768px) {
@@ -111,179 +156,68 @@
 
       .menu-toggle {
         display: block;
+        font-size: 28px;
+        color: #FFD700;
+        cursor: pointer;
       }
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: #111;
-    }
-
-    .hero h1 {
-      font-size: 38px;
-      color: #FFD700;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #ccc;
-    }
-
-    .section {
-      padding: 40px 20px;
-      background: #1a1a1a;
-      margin: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .section:hover {
-      transform: translateY(-5px);
-    }
-
-    .section h2 {
-      color: #FFD700;
-      margin-bottom: 15px;
-    }
-
-    .section ul {
-      list-style: square;
-      padding-left: 20px;
-      color: #ddd;
-    }
-
-    .highlight {
-      background: #222;
-      color: #eee;
-      font-size: 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 20px;
-      border-left: 5px solid #FFD700;
-      border-radius: 10px;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .social-icons a {
-      color: #FFD700;
-      font-size: 20px;
-    }
-
-    footer {
-      text-align: center;
-      color: #999;
-      font-size: 14px;
-      padding: 30px 10px;
-    }
-
-    footer a {
-      color: #FFD700;
-      margin: 0 10px;
     }
   </style>
 </head>
 <body>
-  <div class="preloader" id="preloader">
-    <span>Loading Masora...</span>
-  </div>
 
-  <!-- Header -->
   <header class="header">
     <div class="logo">
-      <img src="logo.jpg" alt="Masora Logo" loading="lazy" />
+      <img src="https://masora.store/Photos/logo.jpg" alt="Masora Logo">
       <span>Masora</span>
     </div>
-    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
-    <nav id="nav-menu">
+    <nav>
       <a href="/">Home</a>
-      <a href="/about-us.html">About</a>
-      <a href="/job-hub.html">Job Hunt</a>
-      <a href="/Careers.html">Careers</a>
-      <a href="/Contact.html">Contact</a>
+      <a href="/jobs">Jobs</a>
+      <a href="/contact">Contact</a>
+      <a href="/p/about-us.html">About</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" data-aos="fade-down">
-    <h1>🚀 Masora – Your IT Job Launchpad</h1>
-    <p>Freshers' most trusted platform for Off-Campus Drives, WFH Jobs & Interview Prep.</p>
+  <section class="section">
+    <h1>About Masora</h1>
+    <p>
+      <strong>Masora</strong> is India's emerging career platform focused on empowering fresh graduates to land their dream IT jobs. We bridge the gap between opportunity and skill by delivering job alerts, mentorship resources, and career guidance — all under one roof.
+    </p>
+    <p>
+      Our mission is to make hiring transparent, inclusive, and accessible, especially for those without elite college tags. We support skill-first careers and promote growth beyond resumes.
+    </p>
   </section>
 
-  <!-- Job Coverage -->
-  <section class="section" data-aos="fade-up">
-    <h2>💼 What We Cover</h2>
-    <ul>
-      <li>Daily IT Job Alerts for Freshers (B.Tech, BCA, MCA, etc.)</li>
-      <li>Off-Campus Drives & Walk-In Interviews</li>
-      <li>Remote Internships & WFH Roles</li>
-      <li>MNC Hiring: Infosys, TCS, Wipro & more</li>
-    </ul>
-  </section>
-
-  <!-- Placement Prep -->
-  <section class="section" data-aos="fade-up">
-    <h2>🧠 Placement Preparation</h2>
-    <ul>
-      <li>Mock Tests, Coding & Reasoning Practice</li>
-      <li>Resume Building Tips</li>
-      <li>Real HR Interview Experiences</li>
-    </ul>
-  </section>
-
-  <!-- Job Categories -->
-  <section class="section" data-aos="fade-up">
-    <h2>📂 Popular Job Categories</h2>
-    <ul>
-      <li>Software Developer (Java, Python, .NET)</li>
-      <li>QA/Testing Roles</li>
-      <li>Data Analyst / BI Analyst</li>
-      <li>Cloud / DevOps / Support</li>
-    </ul>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="highlight" data-aos="fade-up">
-    <span>🎯 Whether you're upskilling or job-hunting — Masora is your daily career partner!</span>
-    <div class="social-icons" aria-label="Social Media Links">
-      <a href="https://www.linkedin.com/company/masora-masora" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.youtube.com/@Masora.marketing" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://whatsapp.com/channel/0029VbBOkoRDeON2e4oucL3E" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://t.me/masora_marketing" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+  <section class="section">
+    <h2>Our Leadership Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="https://masora.store/Photos/Mansoor.jpg" alt="Mansoor Shaik">
+        <h3>Mansoor Shaik</h3>
+        <p>Founder & Chief Executive Officer</p>
+      </div>
+      <div class="team-member">
+        <img src="https://masora.store/Photos/Kalyani.jpg" alt="Kalyani">
+        <h3>Kalyani</h3>
+        <p>Tech Lead & Head of Development</p>
+      </div>
+      <div class="team-member">
+        <img src="https://masora.store/Photos/Aakash.jpg" alt="Aakash">
+        <h3>Aakash</h3>
+        <p>Head of Marketing & Outreach</p>
+      </div>
+      <div class="team-member">
+        <img src="https://masora.store/Photos/Eswar.jpg" alt="Eswar">
+        <h3>Eswar</h3>
+        <p>Head of Human Resources</p>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div>
-      <a href="/privacy-policy.html">Privacy Policy</a> |
-      <a href="/terms-and-conditions.html">Terms</a>
-    </div>
-    <p>&copy; 2025 Masora. All rights reserved.</p>
+    <p>Empowering freshers. Building futures. ✨</p>
+    <p>&copy; 2025 Masora. All Rights Reserved.</p>
   </footer>
 
-  <!-- JS for AOS and Menu Toggle -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    window.addEventListener('load', () => {
-      document.getElementById('preloader').style.display = 'none';
-    });
-
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-  </script>
 </body>
 </html>
