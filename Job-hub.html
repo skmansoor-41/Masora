@@ -232,14 +232,15 @@
       margin: 0 10px;
     }
     .job-card {
-  background-color: #111;
-  border: 1px solid #FFD700;
-  border-radius: 12px;
-  margin: 30px 0;
-  padding: 20px;
-  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #111;
+  border: 1px solid #FFD700;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px; /* use only bottom margin */
+  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+ 
 
 .job-card:hover {
   transform: scale(1.02);
@@ -247,16 +248,16 @@
 }
 
 .job-card h2 {
-  color: #FFD700;
-  font-size: 22px;
-  margin-bottom: 10px;
+  color: #FFD700;
+  font-size: 22px;
+  margin-bottom: 8px; /* Reduce space below title */
 }
 
 .job-card p {
-  margin: 8px 0;
-  font-size: 16px;
-  color: #eee;
-  line-height: 1.6;
+  margin: 6px 0; /* Reduce vertical spacing inside card */
+  font-size: 16px;
+  color: #eee;
+  line-height: 1.5;
 }
 
 
