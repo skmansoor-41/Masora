@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Job Opening - Strategic Cloud Engineer</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+  <style>
+    body {
+      background-color: #000;
+      color: #ffd700;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #111;
+    }
+    nav a {
+      color: #ffd700;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    .job-container {
+      background-color: #111;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #ffd70033;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+    h1, h2 {
+      color: #ffd700;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Masora</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/blogs">Blogs</a>
+      <a href="/job-hub">Job Hunt</a>
+      <a href="/careers">Careers</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="job-container">
+    <h2>Strategic Cloud Engineer – Data Analytics</h2>
+    <p><strong>Company:</strong> Google</p>
+    <p><strong>Location:</strong> Bengaluru or Hyderabad, India</p>
+    
+    <div class="section">
+      <h3>Minimum Qualifications:</h3>
+      <ul>
+        <li>Bachelor's in CS, Engineering, Math, or related field</li>
+        <li>Experience with Python, Java, Scala, Spark, Hadoop</li>
+        <li>Hands-on with Google Cloud Platform</li>
+        <li>Data processing tools: BigQuery, CloudSQL, AlloyDB</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Preferred Qualifications:</h3>
+      <ul>
+        <li>Big Data, Data Mining, ML experience</li>
+        <li>Experience with NoSQL, SparkML, TensorFlow</li>
+        <li>CI/CD & IaC tools (Terraform, Ansible, Jenkins)</li>
+        <li>Security concepts (HSM, encryption, key management)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>About the Role:</h3>
+      <p>As part of Google Cloud Consulting, you'll work on data migrations, analytics systems, and data governance with GCP tools. In this role, you’ll guide enterprises on cloud journeys, build scalable data pipelines, and conduct workshops to empower customers.</p>
+    </div>
+
+    <div class="section">
+      <h3>Responsibilities:</h3>
+      <ul>
+        <li>Translate requirements into scalable cloud architectures</li>
+        <li>Lead migrations to Google Cloud</li>
+        <li>Design and operationalize data systems</li>
+        <li>Implement data governance and quality controls</li>
+        <li>Work closely with customers, product, and engineering teams</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <p><strong>Application:</strong> Visit Google Careers and search "Strategic Cloud Engineer - Data Analytics" or apply directly via your Google profile.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Masora | <a href="mailto:mansoorshaik@masora.store">mansoorshaik@masora.store</a> | Contact: 8977237497</p>
+  </footer>
+</body>
+</html>
