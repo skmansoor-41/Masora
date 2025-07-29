@@ -3,102 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google Job Opening - Strategic Cloud Engineer</title>
-  <link rel="stylesheet" href="/styles/main.css" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Google Strategic Cloud Engineer – Data Analytics – Apply via Masora Job Hub" />
+  <link rel="canonical" href="https://masora.store/job-hub/aug/google-data-analytics.html" />
+  <title>Google – Strategic Cloud Engineer | Masora</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
   <style>
     body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #000;
-      color: #ffd700;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 2rem;
+      color: #fff;
+      overflow-x: hidden;
     }
-    header, footer {
-      text-align: center;
-      padding: 1rem 0;
-      background-color: #111;
+    .preloader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
+    .preloader span {
+      font-size: 28px;
+      color: #FFD700;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #000;
+      border-bottom: 1px solid #FFD700;
+      z-index: 999;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 8px;
+    }
+    .logo span {
+      font-size: 24px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
     }
     nav a {
-      color: #ffd700;
-      margin: 0 1rem;
+      color: #FFD700;
       text-decoration: none;
+      font-weight: 500;
     }
-    .job-container {
-      background-color: #111;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 12px #ffd70033;
-      max-width: 900px;
-      margin: 2rem auto;
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: #FFD700;
+      cursor: pointer;
     }
-    h1, h2 {
-      color: #ffd700;
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        width: 200px;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
     }
     .section {
-      margin-bottom: 2rem;
+      padding: 40px 20px;
+      background: #1a1a1a;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
+    }
+    .section h2, .section h3 {
+      color: #FFD700;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .highlight {
+      background: #111;
+      padding: 30px 20px;
+      text-align: center;
+      border-top: 1px solid #FFD700;
+    }
+    .highlight span {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #FFD700;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: #FFD700;
+    }
+    .social-icons a:hover {
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      padding: 30px 10px;
+    }
+    footer a {
+      color: #FFD700;
+      margin: 0 10px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Masora</h1>
-    <nav>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <span>Loading Masora...</span>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="/logo.jpg" alt="Masora Logo" loading="lazy" />
+      <span>Masora</span>
+    </div>
+    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav id="nav-menu">
       <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/blogs">Blogs</a>
-      <a href="/job-hub">Job Hunt</a>
-      <a href="/careers">Careers</a>
-      <a href="/contact">Contact</a>
+      <a href="/about-us.html">About</a>
+      <a href="/blogs.html">Blogs</a>
+      <a href="/job-hub.html">Job Hunt</a>
+      <a href="/Careers.html">Careers</a>
+      <a href="/Contact.html">Contact</a>
     </nav>
   </header>
 
-  <div class="job-container">
-    <h2>Strategic Cloud Engineer – Data Analytics</h2>
+  <!-- Job Info -->
+  <section class="section" data-aos="fade-up">
+    <h2>🚀 Strategic Cloud Engineer – Data Analytics</h2>
     <p><strong>Company:</strong> Google</p>
     <p><strong>Location:</strong> Bengaluru or Hyderabad, India</p>
-    
-    <div class="section">
-      <h3>Minimum Qualifications:</h3>
-      <ul>
-        <li>Bachelor's in CS, Engineering, Math, or related field</li>
-        <li>Experience with Python, Java, Scala, Spark, Hadoop</li>
-        <li>Hands-on with Google Cloud Platform</li>
-        <li>Data processing tools: BigQuery, CloudSQL, AlloyDB</li>
-      </ul>
-    </div>
 
-    <div class="section">
-      <h3>Preferred Qualifications:</h3>
-      <ul>
-        <li>Big Data, Data Mining, ML experience</li>
-        <li>Experience with NoSQL, SparkML, TensorFlow</li>
-        <li>CI/CD & IaC tools (Terraform, Ansible, Jenkins)</li>
-        <li>Security concepts (HSM, encryption, key management)</li>
-      </ul>
-    </div>
+    <h3>Minimum Qualifications</h3>
+    <ul>
+      <li>Bachelor's in CS, Engineering, Math, or related field</li>
+      <li>Experience with Python, Java, Scala, Spark, Hadoop</li>
+      <li>Hands-on with Google Cloud Platform</li>
+      <li>Data tools: BigQuery, CloudSQL, AlloyDB</li>
+    </ul>
 
-    <div class="section">
-      <h3>About the Role:</h3>
-      <p>As part of Google Cloud Consulting, you'll work on data migrations, analytics systems, and data governance with GCP tools. In this role, you’ll guide enterprises on cloud journeys, build scalable data pipelines, and conduct workshops to empower customers.</p>
-    </div>
+    <h3>Preferred Qualifications</h3>
+    <ul>
+      <li>Experience in Big Data, Data Mining, Machine Learning</li>
+      <li>Familiarity with NoSQL, SparkML, TensorFlow</li>
+      <li>CI/CD & IaC tools (Terraform, Ansible, Jenkins)</li>
+      <li>Knowledge of security (HSM, encryption, key management)</li>
+    </ul>
 
-    <div class="section">
-      <h3>Responsibilities:</h3>
-      <ul>
-        <li>Translate requirements into scalable cloud architectures</li>
-        <li>Lead migrations to Google Cloud</li>
-        <li>Design and operationalize data systems</li>
-        <li>Implement data governance and quality controls</li>
-        <li>Work closely with customers, product, and engineering teams</li>
-      </ul>
-    </div>
+    <h3>About the Role</h3>
+    <p>As part of Google Cloud Consulting, you'll lead data migrations, implement analytics systems, and ensure data governance with GCP tools. You'll guide customers on cloud journeys, build scalable pipelines, and deliver workshops to upskill teams.</p>
 
-    <div class="section">
-      <p><strong>Application:</strong> Visit Google Careers and search "Strategic Cloud Engineer - Data Analytics" or apply directly via your Google profile.</p>
-    </div>
-  </div>
+    <h3>Responsibilities</h3>
+    <ul>
+      <li>Translate business needs into scalable GCP architectures</li>
+      <li>Lead data migrations to Google Cloud</li>
+      <li>Design and operationalize cloud-native data platforms</li>
+      <li>Implement governance and data quality frameworks</li>
+      <li>Work closely with clients, product, and engineering teams</li>
+    </ul>
 
+    <p><strong>Apply Now:</strong> 
+      <a href="https://careers.google.com/jobs/results/" target="_blank" style="color:#FFD700;">Search "Strategic Cloud Engineer – Data Analytics" on Google Careers</a>
+    </p>
+  </section>
+
+  <!-- CTA Highlight -->
+  <section class="highlight" data-aos="fade-up">
+    <span>✨ Discover more premium roles in tech on Masora Job Hub</span>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/company/masora-masora" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@Masora.marketing" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://whatsapp.com/channel/0029VbBOkoRDeON2e4oucL3E" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/masora_marketing" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
+    <div>
+      <a href="/privacy-policy.html">Privacy Policy</a> |
+      <a href="/terms-and-conditions.html">Terms</a>
+    </div>
     <p>&copy; 2025 Masora | <a href="mailto:mansoorshaik@masora.store">mansoorshaik@masora.store</a> | Contact: 8977237497</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener('load', () => {
+      document.getElementById('preloader').style.display = 'none';
+    });
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
