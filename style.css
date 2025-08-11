@@ -1,222 +1,222 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
 
-    .preloader {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 10000;
-    }
+.preloader span {
+  font-size: 28px;
+  color: #FFD700;
+  animation: blink 1s infinite;
+}
 
-    .preloader span {
-      font-size: 28px;
-      color: #FFD700;
-      animation: blink 1s infinite;
-    }
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
 
-    @keyframes blink {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
-    }
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #000;
+  border-bottom: 1px solid #FFD700;
+  z-index: 999;
+}
 
-    .header {
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      background: #000;
-      border-bottom: 1px solid #FFD700;
-      z-index: 999;
-    }
+.logo {
+  display: flex;
+  align-items: center;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-    }
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
 
-    .logo img {
-      height: 50px;
-      margin-right: 10px;
-      border-radius: 8px;
-    }
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFD700;
+}
 
-    .logo span {
-      font-size: 24px;
-      font-weight: bold;
-      color: #FFD700;
-    }
+nav {
+  display: flex;
+  gap: 20px;
+}
 
-    nav {
-      display: flex;
-      gap: 20px;
-    }
+nav a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: 500;
+}
 
-    nav a {
-      color: #FFD700;
-      text-decoration: none;
-      font-weight: 500;
-    }
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #FFD700;
+  cursor: pointer;
+}
 
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      color: #FFD700;
-      cursor: pointer;
-    }
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+  }
 
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background: #111;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        padding: 15px;
-        border-radius: 10px;
-        width: 200px;
-      }
+  nav.active {
+    display: flex;
+  }
 
-      nav.active {
-        display: flex;
-      }
+  .menu-toggle {
+    display: block;
+  }
+}
 
-      .menu-toggle {
-        display: block;
-      }
-    }
+.section {
+  padding: 40px 20px;
+  background: #1a1a1a;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
+}
 
-    .section {
-      padding: 40px 20px;
-      background: #1a1a1a;
-      margin: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
-    }
+.section h1 {
+  color: #FFD700;
+  text-align: center;
+}
 
-    .section h1 {
-      color: #FFD700;
-      text-align: center;
-    }
+.no-jobs-message {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+  color: #FFD700;
+}
 
-    .no-jobs-message {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 18px;
-      color: #FFD700;
-    }
+.cta-area {
+  text-align: center;
+  margin: 40px 0 60px;
+}
 
-    .cta-area {
-      text-align: center;
-      margin: 40px 0 60px;
-    }
+.cta-btn {
+  background: #FFD700;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-    .cta-btn {
-      background: #FFD700;
-      color: #000;
-      font-weight: bold;
-      font-size: 18px;
-      padding: 14px 30px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+.cta-btn:hover {
+  background: #e6c200;
+}
 
-    .cta-btn:hover {
-      background: #e6c200;
-    }
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+}
 
-    .popup-overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.9);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 10001;
-    }
+.popup-content {
+  background: #111;
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  padding: 30px 20px;
+  max-width: 400px;
+  width: 90%;
+  color: #fff;
+  position: relative;
+}
 
-    .popup-content {
-      background: #111;
-      border: 2px solid #FFD700;
-      border-radius: 12px;
-      padding: 30px 20px;
-      max-width: 400px;
-      width: 90%;
-      color: #fff;
-      position: relative;
-    }
+.popup-content h2 {
+  color: #FFD700;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
 
-    .popup-content h2 {
-      color: #FFD700;
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+}
 
-    .popup-content input,
-    .popup-content textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 12px;
-      border: none;
-      border-radius: 8px;
-      background: #333;
-      color: #fff;
-    }
+.popup-content button {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-    .popup-content button {
-      background-color: #FFD700;
-      color: #000;
-      border: none;
-      padding: 12px;
-      width: 100%;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 22px;
+  color: #FFD700;
+  cursor: pointer;
+}
 
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 16px;
-      font-size: 22px;
-      color: #FFD700;
-      cursor: pointer;
-    }
+#hr-status {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #FFD700;
+}
 
-    #hr-status {
-      margin-top: 10px;
-      text-align: center;
-      font-size: 14px;
-      color: #FFD700;
-    }
+footer {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  padding: 30px 10px;
+}
 
-    footer {
-      text-align: center;
-      color: #999;
-      font-size: 14px;
-      padding: 30px 10px;
-    }
+footer a {
+  color: #FFD700;
+  margin: 0 10px;
+}
 
-    footer a {
-      color: #FFD700;
-      margin: 0 10px;
-    }
-    .job-card {
+.job-card {
   background-color: #111;
   border: 1px solid #FFD700;
   border-radius: 12px;
@@ -225,17 +225,20 @@
   box-shadow: 0 2px 12px rgba(255, 215, 0, 0.15);
 }
 
-.job-card h2 {
+/* Updated to apply yellow to both h2 and h3 */
+.job-card h2,
+.job-card h3 {
   color: #FFD700;
   font-size: 20px;
   margin-bottom: 12px;
 }
 
 .job-card p {
-  margin: 4px 0;          /* Less margin between each line */
+  margin: 4px 0;
   font-size: 15px;
   color: #eee;    
 }
+
 .highlight {
   background: linear-gradient(to right, #000, #111);
   padding: 20px;
@@ -265,9 +268,3 @@
 .social-icons a:hover {
   color: #fff;
 }
-
-.job-card h2,
-.job-card h3 {
-    color: #FFD700 !important; /* Yellow */
-}
-
