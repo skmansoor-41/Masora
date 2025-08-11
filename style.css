@@ -265,3 +265,9 @@
 .social-icons a:hover {
   color: #fff;
 }
+
+.job-card h2,
+.job-card h3 {
+    color: #FFD700 !important; /* Yellow */
+}
+
