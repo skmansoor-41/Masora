@@ -236,3 +236,32 @@
   font-size: 15px;
   color: #eee;    
 }
+.highlight {
+  background: linear-gradient(to right, #000, #111);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-top: 1px solid #FFD700;
+  border-bottom: 1px solid #FFD700;
+}
+
+.highlight p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 22px;
+  color: #FFD700; /* default gold color */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
